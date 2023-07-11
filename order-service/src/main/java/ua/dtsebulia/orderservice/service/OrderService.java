@@ -2,6 +2,7 @@ package ua.dtsebulia.orderservice.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ua.dtsebulia.orderservice.dto.OrderLineItemsDto;
 import ua.dtsebulia.orderservice.dto.OrderRequest;
 import ua.dtsebulia.orderservice.model.Order;
@@ -13,6 +14,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OrderService {
 
     private final OrderRepository orderRepository;
